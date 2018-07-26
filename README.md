@@ -1,25 +1,25 @@
-# prograils/ruby-node:latest
+# prograils/ruby-node-chrome:latest
 
-Starting point for running Rails specs - includes lastest stable ruby and
-node 6.10.1
+Starting point for running Rails specs - includes lastest stable ruby, latest
+stable Google Chrome and node 6.10.1
 
 ## What's inside
 
 The supplied `Dockerfile` will create an images for docker containers
-with ruby and nodejs.
+with ruby, nodejs and chrome browser
 
 ## Getting started
 
 ### Getting the image
 
 ```
-$ docker pull prograils/ruby-node
+$ docker pull prograils/ruby-node-chrome
 ```
 
 ### Running
 
 ```
-$ docker run -t -i prograils/ruby-node
+$ docker run -t -i prograils/ruby-node-chrome
 ```
 
 ### Testing
