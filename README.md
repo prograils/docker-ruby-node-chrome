@@ -1,7 +1,7 @@
 # prograils/ruby-node-chrome:latest
 
 Starting point for running Rails specs - includes lastest stable ruby, latest
-stable Google Chrome and node 6.10.1
+stable Google Chrome and node 10.x
 
 ## What's inside
 
