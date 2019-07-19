@@ -25,14 +25,14 @@ describe 'Dockerfile' do
     expect(os_version).to include('Ubuntu 18.04')
   end
 
-  %w(git imagemagick).each do |p|
+  %w(git imagemagick google-chrome-stable).each do |p|
     it "installs package #{p}" do
       expect(package(p)).to be_installed
     end
   end
 
   describe command('ruby -v') do
-    its(:stdout) { should match(/2\.6\.0/) }
+    its(:stdout) { should match(/2\.6\.1/) }
   end
 
   describe command('node -v') do
