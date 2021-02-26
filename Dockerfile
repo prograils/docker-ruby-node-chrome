@@ -1,5 +1,5 @@
-FROM prograils/ruby-node:2.7.1
-MAINTAINER Maciej Litwiniuk <maciej@litwiniuk.net>
+FROM prograils/ruby-node:2.7.2
+LABEL maintainer="Maciej Litwiniuk <maciej@litwiniuk.net>"
 
 # Install Chrome
 RUN apt-get update && apt-get install -y wget
