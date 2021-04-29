@@ -11,10 +11,11 @@ end
 
 describe 'Dockerfile' do
   before(:all) do
-    image = Docker::Image.build_from_dir('.') do |v|
-      matches = v.match(/{\"stream\":\"(Step[^\\"]*)/)
-      puts "=> #{matches.captures[0]}" if matches
-    end
+    image =
+      Docker::Image.build_from_dir('.') do |v|
+        matches = v.match(/{\"stream\":\"(Step[^\\"]*)/)
+        puts "=> #{matches.captures[0]}" if matches
+      end
 
     set :os, family: :debian
     set :backend, :docker
@@ -25,14 +26,14 @@ describe 'Dockerfile' do
     expect(os_version).to include('Ubuntu 18.04')
   end
 
-  %w(git imagemagick google-chrome-stable).each do |p|
+  %w[git imagemagick google-chrome-stable].each do |p|
     it "installs package #{p}" do
       expect(package(p)).to be_installed
     end
   end
 
   describe command('ruby -v') do
-    its(:stdout) { should match(/2\.7\.2/) }
+    its(:stdout) { should match(/2\.7\.3/) }
   end
 
   describe command('node -v') do
