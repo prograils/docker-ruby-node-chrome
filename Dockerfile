@@ -1,4 +1,4 @@
-FROM prograils/ruby-node:2.6.6
+FROM prograils/ruby-node:2.6.7
 MAINTAINER Maciej Litwiniuk <maciej@litwiniuk.net>
 
 # Install Chrome
