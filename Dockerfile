@@ -1,4 +1,4 @@
-FROM prograils/ruby-node:2.7.3
+FROM prograils/ruby-node:2.7.4
 LABEL maintainer="Maciej Litwiniuk <maciej@litwiniuk.net>"
 
 # Install Chrome
